@@ -59,7 +59,7 @@
                 {% if section.settings.show_overlay %}<div class="slideshow__overlay"></div>{% endif %}
               </div>
             {% endif %}
-
+            
             <noscript>
               <div class="slideshow__image"{% if block_image %}{% unless block_image.alt == blank %} role="img" aria-label="{{ block_image.alt | escape }}"{% endunless %} style="background-image: url('{{ block_image | img_url: '2048x' }}'); background-position: {{ block.settings.alignment }};"{% endif %}>
                 {% if block_image == blank %}
@@ -91,7 +91,7 @@
                       {%- endunless -%}
                     </ul>
                   {% endunless %}
-
+                  
                   {%- assign show_link_button = false -%}
                   {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
                     {%- assign show_link_button = true -%}
